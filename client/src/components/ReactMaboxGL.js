@@ -7,8 +7,7 @@ import {
   Sidebar,
   ButtonInfo,
   SelectedHandlerBar,
-  ListContainer,
-  ListTitle
+  ListContainer
 } from "./SideBarStyles";
 import { roberyPaint, weaponPaint, disorderPaint } from "./HeatmapStyle";
 import { paintLayer } from "./3DMapStyle";
@@ -82,7 +81,7 @@ class ReactMapboxGL extends Component {
             </ViewHandler>
           )}
           <ButtonInfo style={{ marginTop: "20px", color: "white" }}>
-            <h3>Display buildings in 3D. ZOOOM!</h3>
+            <h3>Display buildings in 3D. ZOOM IN!</h3>
           </ButtonInfo>
         </ViewHandlerContainer>
         {/* Robery Data Handler */}
@@ -99,6 +98,7 @@ class ReactMapboxGL extends Component {
           </ViewHandler>
           <ButtonInfo style={{ marginTop: "90px", backgroundColor: "#e035e0" }}>
             <h3>Robbery Complaints 2018</h3>
+            <p>Found 207 complaints.</p>
             <p>This includes: </p>
             <ListContainer>
               <ul>
@@ -165,6 +165,7 @@ class ReactMapboxGL extends Component {
             style={{ marginTop: "160px", backgroundColor: "#ffff00" }}
           >
             <h3>Weapon Complaints 2018</h3>
+            <p>Found 7859 complaints.</p>
             <p>This includes: </p>
             {/* <ListContainer> */}
             <ul>
@@ -197,6 +198,7 @@ class ReactMapboxGL extends Component {
             style={{ marginTop: "230px", backgroundColor: "#F32100" }}
           >
             <h3>Disorderly Conduct Complaints 2018</h3>
+            <p>Found 45 complaints.</p>
             <p>This includes: </p>
             {/* <ListContainer> */}
             <ul>
