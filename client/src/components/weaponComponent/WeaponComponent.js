@@ -3,7 +3,20 @@ import {
   ListContainer,
   ListTitle,
   MonthsContainer,
-  MonthButton
+  MonthButton,
+  MonthSpectrumContainer,
+  JanSpectrum,
+  FebSpectrum,
+  MarSpectrum,
+  AprSpectrum,
+  MaySpectrum,
+  JunSpectrum,
+  JulSpectrum,
+  AugSpectrum,
+  SepSpectrum,
+  OctSpectrum,
+  NovSpectrum,
+  DecSpectrum
 } from "./WeaponStyles";
 
 class WeaponComponent extends Component {
@@ -145,6 +158,8 @@ class WeaponComponent extends Component {
         let decData = !this.state.decData;
         this.updateParent(decData, month);
         break;
+      default:
+        console.log("Select a month");
     }
   };
 
@@ -154,46 +169,219 @@ class WeaponComponent extends Component {
         <ListTitle>
           <i class="fas fa-wave-square" /> NYC Weapon Complaints 2018
         </ListTitle>
-        <p>Select month:</p>
-        <p style={{ marginTop: "20px" }}>Year 2018</p>
+        <p style={{ marginBottom: "10px" }}>Select month:</p>
+        {/* <p style={{ marginTop: "20px" }}>Year 2018</p> */}
         <MonthsContainer>
-          <MonthButton value={"1"} onClick={e => this.displayData(e, "value")}>
+          <MonthButton
+            value={"1"}
+            onClick={e => this.displayData(e, "value")}
+            style={
+              this.state.janData
+                ? { backgroundColor: "#e035e0" }
+                : { backgroundColor: "#686868" }
+            }
+          >
             01
           </MonthButton>
-          <MonthButton value={"2"} onClick={e => this.displayData(e, "value")}>
+          <MonthButton
+            value={"2"}
+            onClick={e => this.displayData(e, "value")}
+            style={
+              this.state.febData
+                ? { backgroundColor: "#ffff00", color: "#000000" }
+                : { backgroundColor: "#686868" }
+            }
+          >
             02
           </MonthButton>
-          <MonthButton value={"3"} onClick={e => this.displayData(e, "value")}>
+          <MonthButton
+            value={"3"}
+            onClick={e => this.displayData(e, "value")}
+            style={
+              this.state.marData
+                ? { backgroundColor: "#F32100" }
+                : { backgroundColor: "#686868" }
+            }
+          >
             03
           </MonthButton>
-          <MonthButton value={"4"} onClick={e => this.displayData(e, "value")}>
+          <MonthButton
+            value={"4"}
+            onClick={e => this.displayData(e, "value")}
+            style={
+              this.state.aprData
+                ? { backgroundColor: "#E3F4B2", color: "#0C205F" }
+                : { backgroundColor: "#686868" }
+            }
+          >
             04
           </MonthButton>
-          <MonthButton value={"5"} onClick={e => this.displayData(e, "value")}>
+          <MonthButton
+            value={"5"}
+            onClick={e => this.displayData(e, "value")}
+            style={
+              this.state.mayData
+                ? { backgroundColor: "#491C49" }
+                : { backgroundColor: "#686868" }
+            }
+          >
             05
           </MonthButton>
-          <MonthButton value={"6"} onClick={e => this.displayData(e, "value")}>
+          <MonthButton
+            value={"6"}
+            onClick={e => this.displayData(e, "value")}
+            style={
+              this.state.junData
+                ? { backgroundColor: "#4436FB" }
+                : { backgroundColor: "#686868" }
+            }
+          >
             06
           </MonthButton>
-          <MonthButton value={"7"} onClick={e => this.displayData(e, "value")}>
+          <MonthButton
+            value={"7"}
+            onClick={e => this.displayData(e, "value")}
+            style={
+              this.state.julData
+                ? { backgroundColor: "#DDECEE", color: "#733C9A" }
+                : { backgroundColor: "#686868" }
+            }
+          >
             07
           </MonthButton>
-          <MonthButton value={"8"} onClick={e => this.displayData(e, "value")}>
+          <MonthButton
+            value={"8"}
+            onClick={e => this.displayData(e, "value")}
+            style={
+              this.state.augData
+                ? { backgroundColor: "#3DF9D7", color: "#1427AA" }
+                : { backgroundColor: "#686868" }
+            }
+          >
             08
           </MonthButton>
-          <MonthButton value={"9"} onClick={e => this.displayData(e, "value")}>
+          <MonthButton
+            value={"9"}
+            onClick={e => this.displayData(e, "value")}
+            style={
+              this.state.sepData
+                ? { backgroundColor: "#FCED00", color: "#3A0053" }
+                : { backgroundColor: "#686868" }
+            }
+          >
             09
           </MonthButton>
-          <MonthButton value={"10"} onClick={e => this.displayData(e, "value")}>
+          <MonthButton
+            value={"10"}
+            onClick={e => this.displayData(e, "value")}
+            style={
+              this.state.octData
+                ? { backgroundColor: "#7AD151", color: "#482475" }
+                : { backgroundColor: "#686868" }
+            }
+          >
             10
           </MonthButton>
-          <MonthButton value={"11"} onClick={e => this.displayData(e, "value")}>
+          <MonthButton
+            value={"11"}
+            onClick={e => this.displayData(e, "value")}
+            style={
+              this.state.novData
+                ? { backgroundColor: "#790622" }
+                : { backgroundColor: "#686868" }
+            }
+          >
             11
           </MonthButton>
-          <MonthButton value={"12"} onClick={e => this.displayData(e, "value")}>
+          <MonthButton
+            value={"12"}
+            onClick={e => this.displayData(e, "value")}
+            style={
+              this.state.decData
+                ? { backgroundColor: "#0cff00", color: "#6d04f7" }
+                : { backgroundColor: "#686868" }
+            }
+          >
             12
           </MonthButton>
         </MonthsContainer>
+        <p style={{ marginTop: "20px", marginBottom: "10px" }}>
+          Heatmap Layers:
+        </p>
+        <MonthSpectrumContainer>
+          {this.state.janData ? (
+            <>
+              <p>January 2018</p>
+              <JanSpectrum />
+            </>
+          ) : null}
+          {this.state.febData ? (
+            <>
+              <p>February 2018</p>
+              <FebSpectrum />
+            </>
+          ) : null}
+          {this.state.marData ? (
+            <>
+              <p>March 2018</p>
+              <MarSpectrum />
+            </>
+          ) : null}
+          {this.state.aprData ? (
+            <>
+              <p>April 2018</p>
+              <AprSpectrum />
+            </>
+          ) : null}
+          {this.state.mayData ? (
+            <>
+              <p>May 2018</p>
+              <MaySpectrum />
+            </>
+          ) : null}
+          {this.state.junData ? (
+            <>
+              <p>June 2018</p>
+              <JunSpectrum />
+            </>
+          ) : null}
+          {this.state.julData ? (
+            <>
+              <p>July 2018</p>
+              <JulSpectrum />
+            </>
+          ) : null}
+          {this.state.augData ? (
+            <>
+              <p>August 2018</p>
+              <AugSpectrum />
+            </>
+          ) : null}
+          {this.state.sepData ? (
+            <>
+              <p>September 2018</p>
+              <SepSpectrum />
+            </>
+          ) : null}
+          {this.state.octData ? (
+            <>
+              <p>October 2018</p>
+              <OctSpectrum />
+            </>
+          ) : null}
+          {this.state.novData ? (
+            <>
+              <p>November 2018</p>
+              <NovSpectrum />
+            </>
+          ) : null}
+          {this.state.decData ? (
+            <>
+              <p>December 2018</p>
+              <DecSpectrum />
+            </>
+          ) : null}
+        </MonthSpectrumContainer>
       </ListContainer>
     );
   }

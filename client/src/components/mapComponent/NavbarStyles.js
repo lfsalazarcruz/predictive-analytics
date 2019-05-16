@@ -16,8 +16,8 @@ export const ViewHandler = styled.button`
   border-bottom: 1px solid #000;
   border-right: 1px solid #686868;
   color: #fff;
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
   outline: none;
   background-color: #494949;
   transition: all 0.3s;
