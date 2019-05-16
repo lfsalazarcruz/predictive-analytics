@@ -119,21 +119,49 @@ class MapComponent extends Component {
       case "12":
         this.setState({ decData: data });
         break;
+      default:
+        console.log("Select a month");
     }
   }
 
-  myState = event => {
-    console.log("state", this.state);
+  seeBuildings = event => {
+    this.setState({
+      map3d: !this.state.map3d
+    });
   };
 
   render() {
     return (
       <div>
         <NavbarContainer>
-          <ViewHandler onClick={this.myState}>3D</ViewHandler>
-          <ViewHandler onClick={this.displayWeaponComponent}>W</ViewHandler>
-          {/* <ViewHandler>W</ViewHandler>
-          <ViewHandler>DC</ViewHandler> */}
+          <ViewHandler
+            onClick={this.seeBuildings}
+            style={
+              this.state.map3d
+                ? {
+                    backgroundColor: "#4CAF50",
+                    border: "none",
+                    borderBottom: "1px solid green"
+                  }
+                : { backgroundColor: "#494949" }
+            }
+          >
+            3D
+          </ViewHandler>
+          <ViewHandler
+            onClick={this.displayWeaponComponent}
+            style={
+              this.state.weaponComponent
+                ? {
+                    backgroundColor: "#4CAF50",
+                    border: "none",
+                    borderBottom: "1px solid green"
+                  }
+                : { backgroundColor: "#494949" }
+            }
+          >
+            W
+          </ViewHandler>
           <ViewHandler style={{ backgroundColor: "#3163C7" }}>
             <i class="fas fa-info-circle" />
           </ViewHandler>
@@ -165,7 +193,7 @@ class MapComponent extends Component {
           }}
           pitch={this.state.pitch}
         >
-          {/* {this.state.map3d ? (
+          {this.state.map3d ? (
             <Layer
               id="3d-buildings"
               sourceId="composite"
@@ -174,7 +202,7 @@ class MapComponent extends Component {
               minZoom={4}
               paint={paintLayer}
             />
-          ) : null} */}
+          ) : null}
           {this.state.janData ? (
             <Layer type="heatmap" paint={janPaint}>
               {janWeaponData.map((item, index) => (
