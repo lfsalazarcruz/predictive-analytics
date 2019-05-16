@@ -33,7 +33,7 @@ export const janPaint = {
   ],
   // Adjust the heatmap radius by zoom level
   "heatmap-radius": {
-    stops: [[0, 1], [4, 14]]
+    stops: [[0, 1], [4, 30]]
   }
 };
 
@@ -70,7 +70,7 @@ export const febPaint = {
   ],
   // Adjust the heatmap radius by zoom level
   "heatmap-radius": {
-    stops: [[0, 1], [4, 14]]
+    stops: [[0, 1], [4, 30]]
   }
 };
 
@@ -107,7 +107,7 @@ export const marPaint = {
   ],
   // Adjust the heatmap radius by zoom level
   "heatmap-radius": {
-    stops: [[0, 1], [4, 14]]
+    stops: [[0, 1], [4, 30]]
   }
 };
 
@@ -144,7 +144,7 @@ export const aprPaint = {
   ],
   // Adjust the heatmap radius by zoom level
   "heatmap-radius": {
-    stops: [[0, 1], [4, 14]]
+    stops: [[0, 1], [4, 30]]
   }
 };
 
@@ -181,7 +181,7 @@ export const mayPaint = {
   ],
   // Adjust the heatmap radius by zoom level
   "heatmap-radius": {
-    stops: [[0, 1], [4, 14]]
+    stops: [[0, 1], [4, 30]]
   }
 };
 
@@ -218,7 +218,7 @@ export const junPaint = {
   ],
   // Adjust the heatmap radius by zoom level
   "heatmap-radius": {
-    stops: [[0, 1], [4, 14]]
+    stops: [[0, 1], [4, 30]]
   }
 };
 
@@ -255,7 +255,7 @@ export const julPaint = {
   ],
   // Adjust the heatmap radius by zoom level
   "heatmap-radius": {
-    stops: [[0, 1], [4, 14]]
+    stops: [[0, 1], [4, 30]]
   }
 };
 
@@ -292,7 +292,7 @@ export const augPaint = {
   ],
   // Adjust the heatmap radius by zoom level
   "heatmap-radius": {
-    stops: [[0, 1], [4, 14]]
+    stops: [[0, 1], [4, 30]]
   }
 };
 
@@ -329,7 +329,7 @@ export const sepPaint = {
   ],
   // Adjust the heatmap radius by zoom level
   "heatmap-radius": {
-    stops: [[0, 1], [4, 14]]
+    stops: [[0, 1], [4, 30]]
   }
 };
 
@@ -366,7 +366,7 @@ export const octPaint = {
   ],
   // Adjust the heatmap radius by zoom level
   "heatmap-radius": {
-    stops: [[0, 1], [4, 14]]
+    stops: [[0, 1], [4, 30]]
   }
 };
 
@@ -403,7 +403,7 @@ export const novPaint = {
   ],
   // Adjust the heatmap radius by zoom level
   "heatmap-radius": {
-    stops: [[0, 1], [4, 14]]
+    stops: [[0, 1], [4, 30]]
   }
 };
 
