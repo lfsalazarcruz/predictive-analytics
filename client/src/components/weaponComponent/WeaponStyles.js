@@ -40,6 +40,7 @@ export const MonthButton = styled.button`
   width: 40px;
   height: 40px;
   margin: 2px;
+  padding: 0;
   border-radius: 4px;
   font-size: 20px;
   transition: all 0.3s;
