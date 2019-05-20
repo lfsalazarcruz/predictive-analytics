@@ -22,6 +22,7 @@ export const ViewHandler = styled.button`
   background-color: #494949;
   transition: all 0.3s;
   font-size: 16px;
+  padding: 0;
   :hover {
     cursor: pointer;
     background-color: #686868;
