@@ -14,16 +14,26 @@ export const ListContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  @media (max-width: 400px) {
+    width: 300px;
+  }
 `;
 
 export const ListTitle = styled.h3`
   font-weight: lighter;
+  @media (max-width: 400px) {
+    width: 250px;
+    font-size: 16px;
+  }
 `;
 
 export const MonthsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   width: 310px;
+  @media (max-width: 400px) {
+    width: 250px;
+  }
 `;
 
 export const MonthButton = styled.button`
@@ -46,8 +56,11 @@ export const MonthButton = styled.button`
 
 export const MonthSpectrumContainer = styled.div`
   width: 310px;
-  // max-height: 350px;
-  // overflow: scroll;
+  @media (max-width: 400px) {
+    width: 250px;
+    max-height: 40%;
+    overflow: scroll;
+  }
 `;
 
 export const JanSpectrum = styled.div`
