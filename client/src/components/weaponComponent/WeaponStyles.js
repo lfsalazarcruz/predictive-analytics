@@ -22,7 +22,7 @@ export const ListContainer = styled.div`
 export const ListTitle = styled.h3`
   font-weight: lighter;
   @media (max-width: 400px) {
-    width: 250px;
+    width: 240px;
     font-size: 16px;
   }
 `;
@@ -32,7 +32,7 @@ export const MonthsContainer = styled.div`
   flex-wrap: wrap;
   width: 310px;
   @media (max-width: 400px) {
-    width: 250px;
+    width: 240px;
   }
 `;
 
@@ -58,7 +58,7 @@ export const MonthButton = styled.button`
 export const MonthSpectrumContainer = styled.div`
   width: 310px;
   @media (max-width: 400px) {
-    width: 250px;
+    width: 240px;
     max-height: 40%;
     overflow: scroll;
   }
