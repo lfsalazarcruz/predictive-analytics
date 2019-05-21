@@ -80,8 +80,6 @@ class MapComponent extends Component {
 
   // Update parent from child component
   update(data, month) {
-    console.log("data", data);
-    console.log("month", month);
     switch (month) {
       case "1":
         this.setState({ janData: data });
