@@ -5,6 +5,7 @@ import {
   MonthsContainer,
   MonthButton,
   MonthSpectrumContainer,
+  SpectrumTitle,
   JanSpectrum,
   FebSpectrum,
   MarSpectrum,
@@ -18,6 +19,19 @@ import {
   NovSpectrum,
   DecSpectrum
 } from "./WeaponStyles";
+
+const janWeaponData = require("../../data/012018.json");
+const febWeaponData = require("../../data/022018.json");
+const marWeaponData = require("../../data/032018.json");
+const aprWeaponData = require("../../data/042018.json");
+const mayWeaponData = require("../../data/052018.json");
+const junWeaponData = require("../../data/062018.json");
+const julWeaponData = require("../../data/072018.json");
+const augWeaponData = require("../../data/082018.json");
+const sepWeaponData = require("../../data/092018.json");
+const octWeaponData = require("../../data/102018.json");
+const novWeaponData = require("../../data/112018.json");
+const decWeaponData = require("../../data/122018.json");
 
 class WeaponComponent extends Component {
   constructor(props) {
@@ -107,7 +121,7 @@ class WeaponComponent extends Component {
 
   displayData = event => {
     let month = event.target.value;
-    console.log("month selected", month);
+    // console.log("month selected", month);
 
     switch (month) {
       case "1":
@@ -162,6 +176,15 @@ class WeaponComponent extends Component {
         console.log("Select a month");
     }
   };
+
+  // Counts items in JSON object
+  renderCount(arr) {
+    let count = 0;
+    for (let i = 0; i < arr.length; i++) {
+      count++;
+    }
+    return <p>{count}</p>;
+  }
 
   render() {
     return (
@@ -305,79 +328,119 @@ class WeaponComponent extends Component {
             12
           </MonthButton>
         </MonthsContainer>
-        <p style={{ marginTop: "20px", marginBottom: "10px" }}>
-          Heatmap Layers:
-        </p>
+        {/* <p style={{ marginTop: "20px", marginBottom: "10px" }}>Layers:</p> */}
+        <SpectrumTitle
+          style={{ fontSize: "16px", marginTop: "30px", marginBottom: "20px" }}
+        >
+          <p>Month</p>
+          <p>No. of complaints</p>
+        </SpectrumTitle>
         <MonthSpectrumContainer>
           {this.state.janData ? (
             <>
-              <p>January 2018</p>
+              <SpectrumTitle>
+                <p>January 2018</p>
+                {this.renderCount(janWeaponData)}
+              </SpectrumTitle>
               <JanSpectrum />
             </>
           ) : null}
           {this.state.febData ? (
             <>
-              <p>February 2018</p>
+              <SpectrumTitle>
+                <p>February 2018</p>
+                {this.renderCount(febWeaponData)}
+              </SpectrumTitle>
               <FebSpectrum />
             </>
           ) : null}
           {this.state.marData ? (
             <>
-              <p>March 2018</p>
+              <SpectrumTitle>
+                <p>March 2018</p>
+                {this.renderCount(marWeaponData)}
+              </SpectrumTitle>
               <MarSpectrum />
             </>
           ) : null}
           {this.state.aprData ? (
             <>
-              <p>April 2018</p>
+              <SpectrumTitle>
+                <p>April 2018</p>
+                {this.renderCount(aprWeaponData)}
+              </SpectrumTitle>
               <AprSpectrum />
             </>
           ) : null}
           {this.state.mayData ? (
             <>
-              <p>May 2018</p>
+              <SpectrumTitle>
+                <p>May 2018</p>
+                {this.renderCount(mayWeaponData)}
+              </SpectrumTitle>
               <MaySpectrum />
             </>
           ) : null}
           {this.state.junData ? (
             <>
-              <p>June 2018</p>
+              <SpectrumTitle>
+                <p>June 2018</p>
+                {this.renderCount(junWeaponData)}
+              </SpectrumTitle>
               <JunSpectrum />
             </>
           ) : null}
           {this.state.julData ? (
             <>
-              <p>July 2018</p>
+              <SpectrumTitle>
+                <p>July 2018</p>
+                {this.renderCount(julWeaponData)}
+              </SpectrumTitle>
               <JulSpectrum />
             </>
           ) : null}
           {this.state.augData ? (
             <>
-              <p>August 2018</p>
+              <SpectrumTitle>
+                <p>August 2018</p>
+                {this.renderCount(augWeaponData)}
+              </SpectrumTitle>
               <AugSpectrum />
             </>
           ) : null}
           {this.state.sepData ? (
             <>
-              <p>September 2018</p>
+              <SpectrumTitle>
+                <p>September 2018</p>
+                {this.renderCount(sepWeaponData)}
+              </SpectrumTitle>
               <SepSpectrum />
             </>
           ) : null}
           {this.state.octData ? (
             <>
-              <p>October 2018</p>
+              <SpectrumTitle>
+                <p>October 2018</p>
+                {this.renderCount(octWeaponData)}
+              </SpectrumTitle>
               <OctSpectrum />
             </>
           ) : null}
           {this.state.novData ? (
             <>
-              <p>November 2018</p>
+              <SpectrumTitle>
+                <p>November 2018</p>
+                {this.renderCount(novWeaponData)}
+              </SpectrumTitle>
               <NovSpectrum />
             </>
           ) : null}
           {this.state.decData ? (
             <>
-              <p>December 2018</p>
+              <SpectrumTitle>
+                <p>December 2018</p>
+                {this.renderCount(decWeaponData)}
+              </SpectrumTitle>
               <DecSpectrum />
             </>
           ) : null}

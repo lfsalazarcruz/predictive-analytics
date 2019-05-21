@@ -59,8 +59,18 @@ export const MonthSpectrumContainer = styled.div`
   width: 310px;
   @media (max-width: 400px) {
     width: 240px;
-    max-height: 40%;
+    max-height: 35%;
     overflow: scroll;
+  }
+`;
+
+export const SpectrumTitle = styled.div`
+  width: 310px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  @media (max-width: 400px) {
+    width: 240px;
   }
 `;
 
