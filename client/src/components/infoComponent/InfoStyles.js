@@ -6,6 +6,7 @@ export const InfoContainer = styled.div`
 
 export const InfoParagraph = styled.p`
   margin-bottom: 10px;
+  font-size: 15px;
 `;
 
 export const Link = styled.a`
