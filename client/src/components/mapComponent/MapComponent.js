@@ -45,7 +45,7 @@ class MapComponent extends Component {
       pitch: [60],
       map3d: false,
       weaponComponent: false,
-      infoComponent: false,
+      infoComponent: true,
       janData: false,
       febData: false,
       marData: false,
@@ -173,7 +173,15 @@ class MapComponent extends Component {
           {/* Information View Handler */}
           <ViewHandler
             onClick={this.displayInformationComponent}
-            style={{ backgroundColor: "#3163C7" }}
+            style={
+              this.state.infoComponent
+                ? {
+                    backgroundColor: "#3163C7",
+                    border: "none",
+                    borderBottom: "1px solid blue"
+                  }
+                : { backgroundColor: "#494949" }
+            }
           >
             <i class="fas fa-info-circle" />
           </ViewHandler>
