@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ReactMapboxGl, { Layer, Feature } from "react-mapbox-gl";
 import WeaponComponent from "../weaponComponent/WeaponComponent";
+import InfoComponent from "../infoComponent/InfoComponent";
 import { NavbarContainer, ViewHandler } from "./NavbarStyles";
 import {
   janPaint,
@@ -44,6 +45,7 @@ class MapComponent extends Component {
       pitch: [60],
       map3d: false,
       weaponComponent: false,
+      infoComponent: false,
       janData: false,
       febData: false,
       marData: false,
@@ -74,7 +76,15 @@ class MapComponent extends Component {
 
   displayWeaponComponent = event => {
     this.setState({
-      weaponComponent: !this.state.weaponComponent
+      weaponComponent: !this.state.weaponComponent,
+      infoComponent: false
+    });
+  };
+
+  displayInformationComponent = event => {
+    this.setState({
+      infoComponent: !this.state.infoComponent,
+      weaponComponent: false
     });
   };
 
@@ -160,7 +170,11 @@ class MapComponent extends Component {
           >
             W
           </ViewHandler>
-          <ViewHandler style={{ backgroundColor: "#3163C7" }}>
+          {/* Information View Handler */}
+          <ViewHandler
+            onClick={this.displayInformationComponent}
+            style={{ backgroundColor: "#3163C7" }}
+          >
             <i class="fas fa-info-circle" />
           </ViewHandler>
         </NavbarContainer>
@@ -181,6 +195,7 @@ class MapComponent extends Component {
             decData={this.state.decData}
           />
         ) : null}
+        {this.state.infoComponent ? <InfoComponent /> : null}
         <Map
           center={this.state.center}
           zoom={this.state.zoom}
