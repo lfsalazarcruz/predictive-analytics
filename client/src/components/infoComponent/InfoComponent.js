@@ -11,11 +11,11 @@ class InfoComponent extends Component {
   render() {
     return (
       <ListContainer>
+        <ListTitle>
+          <i class="fas fa-info-circle" /> NYC Crime Complaints 2018 <br /> Data
+          Visualization
+        </ListTitle>
         <InfoContainer>
-          <ListTitle>
-            <i class="fas fa-info-circle" /> NYC Crime Complaints 2018 <br />{" "}
-            Data Visualization
-          </ListTitle>
           <InfoParagraph>
             This application was created to visualize NYPD's Complaint Data from
             2018. The data to create the layers was obtained from the DATA.GOV

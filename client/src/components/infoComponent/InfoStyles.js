@@ -1,7 +1,12 @@
 import styled from "styled-components";
 
 export const InfoContainer = styled.div`
-  width: 85%;
+  width: 80%;
+  max-height: 80%;
+  overflow: scroll;
+  @media (max-width: 400px) {
+    max-height: 70%;
+  }
 `;
 
 export const InfoParagraph = styled.p`

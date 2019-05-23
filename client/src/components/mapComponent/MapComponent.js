@@ -45,7 +45,7 @@ class MapComponent extends Component {
       pitch: [60],
       map3d: false,
       weaponComponent: false,
-      infoComponent: false,
+      infoComponent: true,
       janData: false,
       febData: false,
       marData: false,
