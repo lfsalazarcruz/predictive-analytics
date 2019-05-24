@@ -57,10 +57,11 @@ export const MonthButton = styled.button`
 
 export const MonthSpectrumContainer = styled.div`
   width: 310px;
+  overflow: scroll;
+  max-height: 80%;
   @media (max-width: 400px) {
+    max-height: 70%;
     width: 240px;
-    max-height: 35%;
-    overflow: scroll;
   }
 `;
 

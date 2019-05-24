@@ -192,150 +192,154 @@ class WeaponComponent extends Component {
         <ListTitle>
           <i class="fas fa-wave-square" /> NYC Weapon Complaints 2018
         </ListTitle>
-        <p style={{ marginBottom: "10px" }}>Select month:</p>
-        {/* <p style={{ marginTop: "20px" }}>Year 2018</p> */}
-        <MonthsContainer>
-          <MonthButton
-            value={"1"}
-            onClick={e => this.displayData(e, "value")}
-            style={
-              this.state.janData
-                ? { backgroundColor: "#e035e0" }
-                : { backgroundColor: "#686868" }
-            }
-          >
-            01
-          </MonthButton>
-          <MonthButton
-            value={"2"}
-            onClick={e => this.displayData(e, "value")}
-            style={
-              this.state.febData
-                ? { backgroundColor: "#ffff00", color: "#000000" }
-                : { backgroundColor: "#686868" }
-            }
-          >
-            02
-          </MonthButton>
-          <MonthButton
-            value={"3"}
-            onClick={e => this.displayData(e, "value")}
-            style={
-              this.state.marData
-                ? { backgroundColor: "#F32100" }
-                : { backgroundColor: "#686868" }
-            }
-          >
-            03
-          </MonthButton>
-          <MonthButton
-            value={"4"}
-            onClick={e => this.displayData(e, "value")}
-            style={
-              this.state.aprData
-                ? { backgroundColor: "#E3F4B2", color: "#0C205F" }
-                : { backgroundColor: "#686868" }
-            }
-          >
-            04
-          </MonthButton>
-          <MonthButton
-            value={"5"}
-            onClick={e => this.displayData(e, "value")}
-            style={
-              this.state.mayData
-                ? { backgroundColor: "#491C49" }
-                : { backgroundColor: "#686868" }
-            }
-          >
-            05
-          </MonthButton>
-          <MonthButton
-            value={"6"}
-            onClick={e => this.displayData(e, "value")}
-            style={
-              this.state.junData
-                ? { backgroundColor: "#4436FB" }
-                : { backgroundColor: "#686868" }
-            }
-          >
-            06
-          </MonthButton>
-          <MonthButton
-            value={"7"}
-            onClick={e => this.displayData(e, "value")}
-            style={
-              this.state.julData
-                ? { backgroundColor: "#DDECEE", color: "#733C9A" }
-                : { backgroundColor: "#686868" }
-            }
-          >
-            07
-          </MonthButton>
-          <MonthButton
-            value={"8"}
-            onClick={e => this.displayData(e, "value")}
-            style={
-              this.state.augData
-                ? { backgroundColor: "#3DF9D7", color: "#1427AA" }
-                : { backgroundColor: "#686868" }
-            }
-          >
-            08
-          </MonthButton>
-          <MonthButton
-            value={"9"}
-            onClick={e => this.displayData(e, "value")}
-            style={
-              this.state.sepData
-                ? { backgroundColor: "#FCED00", color: "#3A0053" }
-                : { backgroundColor: "#686868" }
-            }
-          >
-            09
-          </MonthButton>
-          <MonthButton
-            value={"10"}
-            onClick={e => this.displayData(e, "value")}
-            style={
-              this.state.octData
-                ? { backgroundColor: "#7AD151", color: "#482475" }
-                : { backgroundColor: "#686868" }
-            }
-          >
-            10
-          </MonthButton>
-          <MonthButton
-            value={"11"}
-            onClick={e => this.displayData(e, "value")}
-            style={
-              this.state.novData
-                ? { backgroundColor: "#790622" }
-                : { backgroundColor: "#686868" }
-            }
-          >
-            11
-          </MonthButton>
-          <MonthButton
-            value={"12"}
-            onClick={e => this.displayData(e, "value")}
-            style={
-              this.state.decData
-                ? { backgroundColor: "#0cff00", color: "#6d04f7" }
-                : { backgroundColor: "#686868" }
-            }
-          >
-            12
-          </MonthButton>
-        </MonthsContainer>
-        {/* <p style={{ marginTop: "20px", marginBottom: "10px" }}>Layers:</p> */}
-        <SpectrumTitle
-          style={{ fontSize: "16px", marginTop: "30px", marginBottom: "20px" }}
-        >
-          <p>Month</p>
-          <p>No. of complaints</p>
-        </SpectrumTitle>
         <MonthSpectrumContainer>
+          <p style={{ marginBottom: "10px" }}>Select month:</p>
+          {/* <p style={{ marginTop: "20px" }}>Year 2018</p> */}
+          <MonthsContainer>
+            <MonthButton
+              value={"1"}
+              onClick={e => this.displayData(e, "value")}
+              style={
+                this.state.janData
+                  ? { backgroundColor: "#e035e0" }
+                  : { backgroundColor: "#686868" }
+              }
+            >
+              01
+            </MonthButton>
+            <MonthButton
+              value={"2"}
+              onClick={e => this.displayData(e, "value")}
+              style={
+                this.state.febData
+                  ? { backgroundColor: "#ffff00", color: "#000000" }
+                  : { backgroundColor: "#686868" }
+              }
+            >
+              02
+            </MonthButton>
+            <MonthButton
+              value={"3"}
+              onClick={e => this.displayData(e, "value")}
+              style={
+                this.state.marData
+                  ? { backgroundColor: "#F32100" }
+                  : { backgroundColor: "#686868" }
+              }
+            >
+              03
+            </MonthButton>
+            <MonthButton
+              value={"4"}
+              onClick={e => this.displayData(e, "value")}
+              style={
+                this.state.aprData
+                  ? { backgroundColor: "#E3F4B2", color: "#0C205F" }
+                  : { backgroundColor: "#686868" }
+              }
+            >
+              04
+            </MonthButton>
+            <MonthButton
+              value={"5"}
+              onClick={e => this.displayData(e, "value")}
+              style={
+                this.state.mayData
+                  ? { backgroundColor: "#491C49" }
+                  : { backgroundColor: "#686868" }
+              }
+            >
+              05
+            </MonthButton>
+            <MonthButton
+              value={"6"}
+              onClick={e => this.displayData(e, "value")}
+              style={
+                this.state.junData
+                  ? { backgroundColor: "#4436FB" }
+                  : { backgroundColor: "#686868" }
+              }
+            >
+              06
+            </MonthButton>
+            <MonthButton
+              value={"7"}
+              onClick={e => this.displayData(e, "value")}
+              style={
+                this.state.julData
+                  ? { backgroundColor: "#DDECEE", color: "#733C9A" }
+                  : { backgroundColor: "#686868" }
+              }
+            >
+              07
+            </MonthButton>
+            <MonthButton
+              value={"8"}
+              onClick={e => this.displayData(e, "value")}
+              style={
+                this.state.augData
+                  ? { backgroundColor: "#3DF9D7", color: "#1427AA" }
+                  : { backgroundColor: "#686868" }
+              }
+            >
+              08
+            </MonthButton>
+            <MonthButton
+              value={"9"}
+              onClick={e => this.displayData(e, "value")}
+              style={
+                this.state.sepData
+                  ? { backgroundColor: "#FCED00", color: "#3A0053" }
+                  : { backgroundColor: "#686868" }
+              }
+            >
+              09
+            </MonthButton>
+            <MonthButton
+              value={"10"}
+              onClick={e => this.displayData(e, "value")}
+              style={
+                this.state.octData
+                  ? { backgroundColor: "#7AD151", color: "#482475" }
+                  : { backgroundColor: "#686868" }
+              }
+            >
+              10
+            </MonthButton>
+            <MonthButton
+              value={"11"}
+              onClick={e => this.displayData(e, "value")}
+              style={
+                this.state.novData
+                  ? { backgroundColor: "#790622" }
+                  : { backgroundColor: "#686868" }
+              }
+            >
+              11
+            </MonthButton>
+            <MonthButton
+              value={"12"}
+              onClick={e => this.displayData(e, "value")}
+              style={
+                this.state.decData
+                  ? { backgroundColor: "#0cff00", color: "#6d04f7" }
+                  : { backgroundColor: "#686868" }
+              }
+            >
+              12
+            </MonthButton>
+          </MonthsContainer>
+          {/* <p style={{ marginTop: "20px", marginBottom: "10px" }}>Layers:</p> */}
+          <SpectrumTitle
+            style={{
+              fontSize: "16px",
+              marginTop: "30px",
+              marginBottom: "20px"
+            }}
+          >
+            <p>Month</p>
+            <p>No. of complaints</p>
+          </SpectrumTitle>
           {this.state.janData ? (
             <>
               <SpectrumTitle>
