@@ -17,7 +17,9 @@ import {
   SepSpectrum,
   OctSpectrum,
   NovSpectrum,
-  DecSpectrum
+  DecSpectrum,
+  ScrollContainer,
+  ScrollMessage
 } from "./WeaponStyles";
 
 const janWeaponData = require("../../data/012018.json");
@@ -48,8 +50,29 @@ class WeaponComponent extends Component {
       sepData: props.sepData,
       octData: props.octData,
       novData: props.novData,
-      decData: props.decData
+      decData: props.decData,
+      containerHeight: 0,
+      containerWidth: 0
     };
+  }
+
+  componentDidMount() {
+    const height = this.divElement.clientHeight;
+    const width = this.divElement.clientWidth;
+    this.setState({ containerHeight: height, containerWidth: width });
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    const height = this.divElement.clientHeight;
+    const width = this.divElement.clientWidth;
+    console.log("height", height);
+    console.log("width", width);
+    if (prevState.containerHeight !== height) {
+      this.setState({ containerHeight: height });
+    }
+    if (prevState.containerWidth !== width) {
+      this.setState({ containerWidth: width });
+    }
   }
 
   componentWillReceiveProps(nextProps) {
@@ -186,15 +209,33 @@ class WeaponComponent extends Component {
     return <p>{count}</p>;
   }
 
+  // Render scroll message
+  renderScroll(height, width) {
+    if (height > 405 && width < 250) {
+      return (
+        <ScrollContainer>
+          <ScrollMessage>scroll</ScrollMessage>
+        </ScrollContainer>
+      );
+    } else if (height > 500 && width > 300) {
+      return (
+        <ScrollContainer>
+          <ScrollMessage>scroll</ScrollMessage>
+        </ScrollContainer>
+      );
+    }
+  }
+
   render() {
     return (
       <ListContainer>
         <ListTitle>
           <i class="fas fa-wave-square" /> NYC Weapon Complaints 2018
         </ListTitle>
-        <MonthSpectrumContainer>
+        <MonthSpectrumContainer
+          ref={divElement => (this.divElement = divElement)}
+        >
           <p style={{ marginBottom: "10px" }}>Select month:</p>
-          {/* <p style={{ marginTop: "20px" }}>Year 2018</p> */}
           <MonthsContainer>
             <MonthButton
               value={"1"}
@@ -329,7 +370,6 @@ class WeaponComponent extends Component {
               12
             </MonthButton>
           </MonthsContainer>
-          {/* <p style={{ marginTop: "20px", marginBottom: "10px" }}>Layers:</p> */}
           <SpectrumTitle
             style={{
               fontSize: "16px",
@@ -449,6 +489,10 @@ class WeaponComponent extends Component {
             </>
           ) : null}
         </MonthSpectrumContainer>
+        {this.renderScroll(
+          this.state.containerHeight,
+          this.state.containerWidth
+        )}
       </ListContainer>
     );
   }

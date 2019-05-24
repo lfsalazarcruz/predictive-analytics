@@ -59,6 +59,7 @@ export const MonthSpectrumContainer = styled.div`
   width: 310px;
   overflow: scroll;
   max-height: 80%;
+  padding-bottom: 10px;
   @media (max-width: 400px) {
     max-height: 70%;
     width: 240px;
@@ -229,4 +230,26 @@ export const DecSpectrum = styled.div`
     #ff44ff,
     #6d04f7
   );
+`;
+
+export const ScrollContainer = styled.div`
+  border-top: 1px solid rgba(115, 115, 115, 0.5);
+  width: 310px;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  @media (max-width: 400px) {
+    width: 240px;
+  }
+`;
+
+export const ScrollMessage = styled.h5`
+  margin: 0;
+  text-align: center;
+  background-color: rgba(115, 115, 115, 0.5);
+  color: #adadad;
+  width: 100px;
+  padding: 2px 4px;
+  border-radius: 0 0 5px 5px;
+  user-select: none;
 `;
