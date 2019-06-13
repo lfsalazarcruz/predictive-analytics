@@ -144,7 +144,6 @@ class WeaponComponent extends Component {
 
   displayData = event => {
     let month = event.target.value;
-    // console.log("month selected", month);
 
     switch (month) {
       case "1":
